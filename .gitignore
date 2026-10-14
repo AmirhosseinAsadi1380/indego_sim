@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# tools
+.pytest_cache/
+.ipynb_checkpoints/
+MUJOCO_LOG.TXT
+
+# Indego segment meshes: derived from a commercial 3D model, not redistributable
+# (the model builds without them, see model/builder.py)
+indego_sim/assets/indego/

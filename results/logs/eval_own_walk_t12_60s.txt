@@ -1,0 +1,3 @@
+{"seed": 0, "fell": null, "distance_m": 37.27, "steps": 117, "backward_steps": 0, "step_length_m": 0.285, "wall_s": 110}
+{"seed": 1, "fell": null, "distance_m": 37.43, "steps": 117, "backward_steps": 0, "step_length_m": 0.286, "wall_s": 110}
+SUMMARY sci_t12_aisD ctrl=zero delay=0.03 s: 2/2 walked 60 s, distance 37.27-37.43 m, steps 117

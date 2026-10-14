@@ -1,0 +1,9 @@
+{"seed": 0, "fell": null, "distance_m": 17.56, "steps": 56, "backward_steps": 0, "step_length_m": 0.282, "wall_s": 73}
+{"seed": 1, "fell": null, "distance_m": 17.66, "steps": 56, "backward_steps": 0, "step_length_m": 0.283, "wall_s": 73}
+{"seed": 2, "fell": null, "distance_m": 17.86, "steps": 56, "backward_steps": 0, "step_length_m": 0.285, "wall_s": 74}
+{"seed": 3, "fell": null, "distance_m": 17.8, "steps": 56, "backward_steps": 0, "step_length_m": 0.284, "wall_s": 73}
+{"seed": 4, "fell": null, "distance_m": 17.73, "steps": 56, "backward_steps": 0, "step_length_m": 0.283, "wall_s": 73}
+{"seed": 5, "fell": null, "distance_m": 17.96, "steps": 56, "backward_steps": 0, "step_length_m": 0.286, "wall_s": 74}
+{"seed": 6, "fell": null, "distance_m": 17.92, "steps": 56, "backward_steps": 0, "step_length_m": 0.284, "wall_s": 74}
+{"seed": 7, "fell": null, "distance_m": 17.77, "steps": 56, "backward_steps": 0, "step_length_m": 0.283, "wall_s": 74}
+SUMMARY sci_t12_aisD ctrl=zero delay=0.03 s: 8/8 walked 30 s, distance 17.56-17.96 m, steps 56

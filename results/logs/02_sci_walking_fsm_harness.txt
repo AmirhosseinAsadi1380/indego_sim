@@ -1,0 +1,7 @@
+events: [(1.35, 'toe_off_r'), (2.13, 'heel_strike_r'), (2.88, 'toe_off_r'), (3.2, 'heel_strike_r'), (4.04, 'toe_off_l'), (4.97, 'heel_strike_l'), (5.06, 'toe_off_l'), (6.14, 'heel_strike_l'), (6.21, 'toe_off_r'), (6.23, 'heel_strike_r'), (6.25, 'toe_off_r'), (6.56, 'heel_strike_r'), (6.62, 'toe_off_r'), (7.0, 'heel_strike_r'), (8.7, 'toe_off_l'), (8.76, 'heel_strike_l'), (8.78, 'toe_off_l'), (10.19, 'heel_strike_l'), (11.01, 'toe_off_l'), (11.21, 'heel_strike_l'), (11.53, 'toe_off_r'), (11.96, 'heel_strike_r'), (12.23, 'toe_off_l'), (12.36, 'heel_strike_l'), (13.72, 'toe_off_l'), (13.77, 'heel_strike_l'), (13.8, 'toe_off_l'), (15.18, 'heel_strike_l'), (15.24, 'toe_off_l'), (15.48, 'heel_strike_l'), (16.45, 'toe_off_r'), (16.91, 'heel_strike_r'), (17.18, 'toe_off_l'), (17.38, 'heel_strike_l'), (18.73, 'toe_off_l'), (18.77, 'heel_strike_l'), (18.8, 'toe_off_l'), (19.59, 'heel_strike_l')]
+steps completed by the FSM: 8 (feet closed after a double-support time-out: 0); fell: False
+walk intent at 2.0 s; first step triggered at 1.09 s
+controller COM estimate vs truth (with trunk IMU): bias +0 mm, SD 4 mm
+crutch load mean/peak: 367 / 543 N (74 %BW peak)
+peak exo torque |hip|/|knee|: 57 / 59 N m; winding temp max 114.9 C
+figure -> results/walking_sci_t10_aisA_harness.png

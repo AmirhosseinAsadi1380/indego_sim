@@ -1,0 +1,2 @@
+video -> results/own_walking_healthy_zero.mp4
+healthy exo=zero delay=30 ms  fell=False  t=30.0 s  distance=20.27 m  speed=0.72 m/s

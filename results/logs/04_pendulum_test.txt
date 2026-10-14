@@ -1,0 +1,7 @@
+healthy      first swing  121.2 deg   R2 1.44   oscillations 1   rest 84 deg
+SCI preset   first swing   95.9 deg   R2 1.17   oscillations 1   rest 82 deg
+'measured'   first swing   84.4 deg   R2 1.03   oscillations 0   rest 82 deg
+fitted       first swing   84.4 deg   R2 1.03   oscillations 0   rest 82 deg
+true parameters  : {'mu': 0.3, 'gain': 4.0}
+fitted parameters: {'mu': 0.304, 'gain': 3.507}
+figure -> results/pendulum_test.png

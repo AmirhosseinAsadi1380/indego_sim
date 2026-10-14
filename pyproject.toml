@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indego_sim"
+version = "0.2.0"
+description = "Human (MyoLeg) + Indego-like exoskeleton simulation for controller design: drives, cuffs, sensors, volition, reflexes, SCI, crutches"
+requires-python = ">=3.10"
+dependencies = ["mujoco>=3.3.5", "numpy>=1.24", "scipy>=1.10", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+env = ["gymnasium>=0.29"]
+viz = ["matplotlib>=3.7", "imageio[ffmpeg]>=2.30"]
+tune = ["cma>=3.3"]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["indego_sim*"]
+
+[tool.setuptools.package-data]
+indego_sim = ["assets/indego/*", "params/subjects/*.yaml"]

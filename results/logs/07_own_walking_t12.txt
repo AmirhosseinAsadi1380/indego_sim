@@ -1,0 +1,2 @@
+video -> results/own_walking_sci_t12_aisD_zero.mp4
+sci_t12_aisD exo=zero delay=30 ms  fell=False  t=30.0 s  distance=17.56 m  speed=0.63 m/s

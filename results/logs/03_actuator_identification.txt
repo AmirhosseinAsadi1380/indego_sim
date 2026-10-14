@@ -1,0 +1,16 @@
+parameter                                      true   identified  error %
+joint inertia J [kg m^2]                     0.1802       0.1862      3.3
+Coulomb friction [N m]                          1.8        1.797     -0.1
+viscous friction [N m s/rad]                  0.288        0.279     -3.1
+gravity m*g*l [N m]                           6.475        6.578      1.6
+command->measured-current delay [s]          0.0095     0.009971      5.0
+rotor inertia, segment attached [kg m^2]    5.5e-06    1.596e-05    190.1
+rotor inertia, segment detached (E) [kg m^2]    5.5e-06    1.024e-05     86.1
+
+FRF cross-check: {'inertia': 0.2634, 'viscous': 0.954, 'stiffness': 8.4053, 'delay': 0.0031, 'rms_log_error': 0.4423} 
+(FRF damping includes the equivalent damping of Coulomb friction at this amplitude; the stiffness is gravity linearised about the motion, so expect it below m*g*l for large swings)
+
+The delay row compares with cmd_delay + sensor_delay + half a sample (what the measurement contains). 
+The rotor-inertia row shows why it must be identified with the segment detached: with the segment attached it is ~2 % of the joint inertia, so a 3 % error in J becomes a 100+ % error in the rotor inertia. 
+Even detached, 200 Hz logging cannot resolve it well (test E); use the motor/gearbox datasheet value or log the drive at >= 1 kHz for that one test.
+figure -> results/actuator_id.png

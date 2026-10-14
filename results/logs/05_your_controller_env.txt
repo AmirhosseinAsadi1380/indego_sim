@@ -1,0 +1,3 @@
+observation vector: (44,) (34 stock Indego values + 10 trunk IMU)
+episode 0: subject=sci_t12_aisD   t=  2.5s fell=True heel-strikes=7 return= -14.37 peak cuff force=  417 N
+episode 1: subject=sci_t10_aisA   t=  9.8s fell=True heel-strikes=1 return= -12.05 peak cuff force=  156 N

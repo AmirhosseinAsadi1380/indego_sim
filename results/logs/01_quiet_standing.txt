@@ -1,0 +1,8 @@
+fell: False
+COM sway (std) x/y: 10.0 / 0.0 mm
+crutch load mean (L/R): 83 / 83 N = 22 %BW
+F_exo_thigh_cuff_l       mean |F| =   23.6 N
+F_exo_shank_cuffP_l      mean |F| =   29.7 N
+F_exo_belt               mean |F| =   50.8 N
+spasms: [array([9.39600000000127, 'spasm_flexor_both'], dtype=object)]
+figure -> results/quiet_standing_sci.png

@@ -1,0 +1,10 @@
+mujoco>=3.3.5          # dcmotor actuator, sensor interval/delay; developed on 3.15
+numpy>=1.24
+scipy>=1.10
+pyyaml>=6.0
+gymnasium>=0.29        # optional: IndegoEnv (a minimal fallback base class is used without it)
+matplotlib>=3.7        # examples
+imageio[ffmpeg]>=2.30  # videos
+cma>=3.3               # optional: tools/tune_support.py, tools/diag/tune_own_walk.py
+pytest>=7              # tests
+# MyoLeg model + assets (MyoSuite):  git clone https://github.com/MyoHub/myo_sim && pip install -e myo_sim

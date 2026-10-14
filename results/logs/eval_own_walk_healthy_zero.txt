@@ -1,0 +1,9 @@
+{"seed": 0, "fell": null, "distance_m": 20.27, "steps": 53, "backward_steps": 0, "step_length_m": 0.35, "wall_s": 90}
+{"seed": 1, "fell": null, "distance_m": 20.41, "steps": 53, "backward_steps": 0, "step_length_m": 0.351, "wall_s": 91}
+{"seed": 2, "fell": null, "distance_m": 20.38, "steps": 53, "backward_steps": 0, "step_length_m": 0.351, "wall_s": 90}
+{"seed": 3, "fell": null, "distance_m": 20.36, "steps": 53, "backward_steps": 0, "step_length_m": 0.351, "wall_s": 91}
+{"seed": 4, "fell": null, "distance_m": 20.39, "steps": 53, "backward_steps": 0, "step_length_m": 0.351, "wall_s": 90}
+{"seed": 5, "fell": null, "distance_m": 20.35, "steps": 53, "backward_steps": 0, "step_length_m": 0.35, "wall_s": 91}
+{"seed": 6, "fell": null, "distance_m": 20.49, "steps": 53, "backward_steps": 0, "step_length_m": 0.352, "wall_s": 91}
+{"seed": 7, "fell": null, "distance_m": 20.39, "steps": 53, "backward_steps": 0, "step_length_m": 0.352, "wall_s": 91}
+SUMMARY healthy ctrl=zero delay=0.03 s: 8/8 walked 30 s, distance 20.27-20.49 m, steps 53

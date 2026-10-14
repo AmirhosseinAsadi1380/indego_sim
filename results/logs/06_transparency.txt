@@ -1,0 +1,3 @@
+zero torque  fell=False  thigh-cuff |F| rms = 11.9 N   hip torque rms = 0.09 N m
+transparent  fell=False  thigh-cuff |F| rms = 10.3 N   hip torque rms = 2.19 N m
+figure -> results/transparency.png
