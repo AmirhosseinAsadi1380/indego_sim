@@ -1,6 +1,0 @@
-
-{"seed": 0, "fell": 8.82, "distance_m": 2.98, "steps": 10, "backward_steps": 1, "step_length_m": 0.266, "wall_s": 16}
-{"seed": 1, "fell": 9.43, "distance_m": 2.43, "steps": 10, "backward_steps": 1, "step_length_m": 0.27, "wall_s": 16}
-{"seed": 2, "fell": 9.89, "distance_m": 3.27, "steps": 12, "backward_steps": 2, "step_length_m": 0.246, "wall_s": 16}
-{"seed": 3, "fell": 10.15, "distance_m": 2.83, "steps": 12, "backward_steps": 2, "step_length_m": 0.171, "wall_s": 16}
-SUMMARY sci_t12_aisD ctrl=zero delay=0.06 s: 0/4 walked 30 s, distance 2.43-3.27 m, steps 11, falls at [8.82, 9.43, 9.89, 10.15] s

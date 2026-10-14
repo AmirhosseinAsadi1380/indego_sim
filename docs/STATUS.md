@@ -19,7 +19,7 @@
 | Unsupported standing, incomplete SCI | T12 AIS D stands without crutches or help, 30 s, 4/4 seeds, in 3D and in the sagittal-plane model (`SimConfig.planar`); L2 AIS C (ankles 1/5) falls at 0.3 s |
 | Planarizer (test rig) | pelvis held within 2 mm sideways and < 1 deg roll under a 150 N push on the trunk; forward motion and pitch free; off = bit-identical results |
 | Floor | unbounded plane at the height of MyoSuite's old pedestal (whose 1.05 m-radius collision cylinder made anyone walking more than ~1 m step off and fall) |
-| The person walks on their own in the exo | `gait_mode="walk"`, 30 ms long-loop delay, sagittal model, no crutches or help. T12 AIS D (incomplete SCI, `HumanWalkParams` defaults): zero-torque exo 8/8 seeds walk 30 s, 17.6-18.0 m (0.64 m/s), 56 steps, none backward; 60 s 2/2 (37.3 m); transparent controller 6/8 (falls at 16.5 and 26 s). Healthy (`HumanWalkParams.for_subject("healthy")`): zero-torque 8/8 (20.3-20.5 m, 0.72 m/s), transparent 8/8 (19.4-20.0 m), 60 s 2/2. `examples/07_own_walking.py` |
+| The person walks on their own in the exo | `gait_mode="walk"`, 30 ms long-loop delay, sagittal model, no crutches or help. T12 AIS D (incomplete SCI, `HumanWalkParams` defaults): zero-torque exo 8/8 seeds walk 30 s, 17.6-18.0 m (0.64 m/s), 56 steps, none backward; 60 s 2/2 (37.3 m); transparent controller 6/8 (falls at 16.5 and 26 s). Healthy (`HumanWalkParams.for_subject("healthy")`): zero-torque 8/8 (20.3-20.5 m, 0.72 m/s), transparent 8/8 (19.4-20.0 m), 60 s 2/2. `examples/01_own_walking.py` |
 | Gymnasium env | 44-D observation (34 stock + 10 trunk IMU), randomised episodes incl. trunk-IMU strap misalignment, ground-truth info |
 
 ## Not working yet / limitations
@@ -37,8 +37,8 @@ relying on their fall times.
   need their own tuning (`tools/diag/tune_own_walk.py`, ~1 h on 16 cores). The gaits are faster than typical Indego
   users (0.64-0.72 vs 0.2-0.5 m/s), sagittal only, and untested against pushes, slopes or uneven ground.
 * **Closed-loop walking of the complete-SCI user with crutches**: the first step is clean, but the user
-  falls in the double support after it (1 step over 4 seeds, falls at 10–15 s;
-  `results/walking_sci_t10_aisA_crutches.*`). Mechanism: after the step the COM sits near mid-stance,
+  falls in the double support after it (1 step over 4 seeds, falls at 10–15 s).
+  Mechanism: after the step the COM sits near mid-stance,
   ~10–15 cm behind the front ankle; the person advances both crutches (~2.5 s) and then cannot bring the
   COM forward — crutches planted ahead can only push back and a complete-SCI user has no push-off —
   and while waiting with the weight shifted sideways toward the next stance foot a slow lateral drift
@@ -98,13 +98,13 @@ relying on their fall times.
   transparent or assist-as-needed exo.
 * Overhead harness + timer-triggered stepping (40 % BWS) does not fall (8 steps in 20 s), but the body
   hangs back in the harness with both hips flexed 20–35° and makes no net progress; the hip motors heat
-  to ~115 °C holding that posture (`results/walking_sci_t10_aisA_harness.png`). Not a usable walking demo.
+  to ~115 °C holding that posture. Not a usable walking demo.
 * **Gait-template walking** (`gait_mode="own"`, the default: gait-template tracking + static optimisation +
   SIMBICON-like balance) falls after ~2.3 s in every tested combination (no support or crutches ×
-  zero-torque, transparent or assist-as-needed exo; the T12 AIS D episode in example 05 falls at 2.5 s).
+  zero-torque, transparent or assist-as-needed exo; the T12 AIS D episode in `examples/03_your_controller_env.py` falls at 2.5 s).
   Standing works. Use `gait_mode="walk"` for a person who walks on their own.
 * A bilateral extensor spasm of default amplitude makes the standing SCI user fall backward with the
-  quasi-static AFO when spasms are forced (`results/standing_extensor_spasm.*`). Plausible, but check
+  quasi-static AFO when spasms are forced. Plausible, but check
   against your participants and AFO stiffness.
 * The MyoLeg knee range is 0–120°, which caps pendulum-test excursions.
 * Many parameters are estimates ([est] in PARAMETERS.md), notably the cuff stiffnesses, the motor

@@ -1,7 +1,7 @@
 """Render results/model_overview.png: the SCI user standing in the exo with crutches, two views, with the
 IMU locations (hip unit, thighs, add-on trunk IMU) shown as small spheres.
 
-    MUJOCO_GL=egl python tools/render_overview.py
+    python tools/render_overview.py          (headless Linux: MUJOCO_GL=egl)
 """
 import os
 import sys
@@ -31,8 +31,8 @@ for name in ("exo_imu_hip", "exo_imu_thigh_l", "exo_imu_thigh_r", "trunk_imu"):
 opt = mujoco.MjvOption()
 opt.sitegroup[4] = True
 imgs = []
+r = mujoco.Renderer(m, 1000, 1200)          # one renderer for both views (a second GL context can render black)
 for az in (135, 90):
-    r = mujoco.Renderer(m, 1000, 1200)
     cam = viz.make_camera(sim, distance=2.0, azimuth=az, elevation=-8)
     cam.lookat[2] = 0.75
     r.update_scene(sim.d, cam, scene_option=opt)

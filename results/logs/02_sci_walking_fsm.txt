@@ -1,7 +1,0 @@
-events: [(6.8, 'toe_off_r'), (7.48, 'heel_strike_r'), (13.0, 'toe_off_l'), (13.12, 'fall'), (13.18, 'toe_off_r'), (13.26, 'heel_strike_r'), (13.27, 'toe_off_r'), (13.29, 'heel_strike_l'), (13.29, 'toe_off_l'), (13.59, 'heel_strike_l')]
-steps completed by the FSM: 1 (feet closed after a double-support time-out: 0); fell: True at t=13.6 s
-walk intent at 2.0 s; first step triggered at 6.42 s
-controller COM estimate vs truth (with trunk IMU): bias +6 mm, SD 3 mm
-crutch load mean/peak: 174 / 529 N (72 %BW peak)
-peak exo torque |hip|/|knee|: 58 / 52 N m; winding temp max 40.3 C
-figure -> results/walking_sci_t10_aisA_crutches.png

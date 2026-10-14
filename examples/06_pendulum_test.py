@@ -7,7 +7,7 @@
 With a real participant: record the knee angle (goniometer/IMU, ~100+ Hz) during the release, then
 call fit_pendulum(t, knee_deg, get_preset("..."), side="r").
 
-    python examples/04_pendulum_test.py
+    python examples/06_pendulum_test.py
 """
 import os
 import sys

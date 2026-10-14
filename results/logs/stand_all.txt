@@ -1,5 +1,0 @@
-sci_t10_aisA   crutches  fell=False sway x/y=10.2/0.0 mm crutch=22%BW
-sci_t5_aisA    crutches  fell=False sway x/y=10.5/0.0 mm crutch=21%BW
-sci_l2_aisC    crutches  fell=False sway x/y=10.1/0.0 mm crutch=7%BW
-sci_t12_aisD   crutches  fell=False sway x/y=4.9/11.8 mm crutch=6%BW
-healthy        none      fell=False sway x/y=11.5/3.2 mm crutch=0%BW

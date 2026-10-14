@@ -1,8 +1,0 @@
-fell: True
-COM sway (std) x/y: 125.5 / 6.2 mm
-crutch load mean (L/R): 58 / 60 N = 16 %BW
-F_exo_thigh_cuff_l       mean |F| =   31.3 N
-F_exo_shank_cuffP_l      mean |F| =   25.8 N
-F_exo_belt               mean |F| =   44.9 N
-spasms: [array([5.729999999999045, 'spasm_extensor_l'], dtype=object), array([7.11399999999848, 'spasm_extensor_l'], dtype=object)]
-figure -> results/standing_extensor_spasm.png

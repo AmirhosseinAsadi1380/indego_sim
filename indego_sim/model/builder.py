@@ -124,18 +124,28 @@ def _flat_ground(spec):
     """MyoSuite's scene stands the model on a pedestal: a collision cylinder of 1.05 m radius whose top is at
     z = 0.015, with the floor plane 0.4 m lower - anyone who walks more than ~1 m steps off its edge and falls.
     Replace it by an unbounded floor at the pedestal height with the same contact parameters (standing and stepping
-    on it are unchanged; the pedestal's collision cylinder is switched off, its visual mesh stays)."""
+    on it are unchanged). The scene's room and pedestal meshes (visual only) are hidden and a plain sky is drawn
+    instead, so renders show the ground the model actually stands on."""
     floor = cyl = None
     for g in spec.worldbody.geoms:
         if g.type == mujoco.mjtGeom.mjGEOM_PLANE and g.name == "floor":
             floor = g
         elif g.type == mujoco.mjtGeom.mjGEOM_CYLINDER and g.contype:
             cyl = g
+        elif g.type == mujoco.mjtGeom.mjGEOM_MESH:
+            g.group = 5                                   # not drawn by default (visible groups 0-2)
     if floor is None or cyl is None:
         return
     floor.pos = [floor.pos[0], floor.pos[1], cyl.pos[2] + cyl.size[1]]
     floor.size = [100.0, 100.0, floor.size[2]]          # drawn size only (a plane collides everywhere)
     cyl.contype = cyl.conaffinity = 0
+    sky = spec.add_texture()
+    sky.name = "indego_sim_sky"
+    sky.type = mujoco.mjtTexture.mjTEXTURE_SKYBOX
+    sky.builtin = mujoco.mjtBuiltin.mjBUILTIN_GRADIENT
+    sky.rgb1 = [0.93, 0.94, 0.96]
+    sky.rgb2 = [0.62, 0.66, 0.72]
+    sky.width = sky.height = 512
 
 
 # ----------------------------------------------------------------------------

@@ -6,7 +6,7 @@ Floor (behaviour change for every scenario)
 * MyoSuite's scene stood the model on a pedestal: a collision cylinder of 1.05 m radius (top at z = 0.015 m) with
   the floor plane 0.4 m lower, so anyone who walked more than ~1 m stepped off its edge and fell. The builder now
   raises the floor plane to the pedestal top (same contact parameters) and switches the cylinder's collision off
-  (`model.builder._flat_ground`; its visual mesh stays). Within the old pedestal the surface is the same, but the
+  (`model.builder._flat_ground`). Within the old pedestal the surface is the same, but the
   foot contacts are now generated against a plane instead of a cylinder, so results move slightly: default crutch
   walking (`eval_walk.py '{}'`, seeds 0-3, 30 s) still makes 1 step and falls 4/4, now at 10.5/14.9/10.2/15.1 s
   (was 12.5/11.0/13.2/12.3 s); quiet standing (`stand_all.py`) still stands for all presets (sway changes by a few
@@ -44,6 +44,14 @@ Repository
 * `tools/diag/eval_own_walk.py` (own-walking score over seeds) and `tools/diag/tune_own_walk.py` (CMA-ES tuning of
   `HumanWalkParams` for a person / delay / device).
 * `docs/DEVELOPMENT.md`: setup, commands, conventions, rules for changes, next steps.
+* Renders show the ground the model stands on: MyoSuite's room and pedestal meshes (visual only) are hidden and a
+  plain sky is drawn; `tools/render_overview.py` draws both views with one renderer (the second view was black on
+  Windows).
+* README condensed to the essentials with clips of the walking; the model description moved to `docs/MODEL.md`.
+* `results/` keeps only the successful walking simulations (videos, GIF clips, evaluation logs) and the model
+  overview. Example 02 (complete-SCI crutch walking with the FSM, which falls after one step) is removed; the
+  examples are renumbered: 01 own walking, 02 quiet standing, 03 Gymnasium env + your controller,
+  04 transparency, 05 actuator identification, 06 pendulum test.
 
 Test rig and diagnostics (no change to the default behaviour: with the planarizer off, walking and standing
 results are bit-identical to 0.2)

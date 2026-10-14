@@ -6,8 +6,8 @@ docs/STATUS.md): sagittal-plane model (SimConfig.planar), a fast long-loop react
 60 ms default) that the person compensates with an internal forward model. The walking parameters are tuned per
 subject preset (HumanWalkParams.for_subject): "sci_t12_aisD" (incomplete SCI, the default) and "healthy".
 
-    python examples/07_own_walking.py                         # T12 AIS D, 30 s, zero-torque exo
-    python examples/07_own_walking.py --subject healthy --exo transparent --video
+    python examples/01_own_walking.py                         # T12 AIS D, 30 s, zero-torque exo
+    python examples/01_own_walking.py --subject healthy --exo transparent --video
 """
 import argparse
 import os
@@ -44,9 +44,6 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "results")
 os.makedirs(OUT, exist_ok=True)
 if args.video:
     from indego_sim import viz
-    for g in range(m.ngeom):                          # hide MyoSuite's room (visual only) - the walk leaves it
-        if m.geom_bodyid[g] == 0 and m.geom_type[g] == 7:
-            m.geom_group[g] = 5                       # not drawn (default visible groups 0-2)
     path = os.path.join(OUT, f"own_walking_{args.subject}_{args.exo}.mp4")
     viz.record(sim, ctrl, args.duration, path, azimuth=90.0, distance=3.0, elevation=-5.0)
     print("video ->", os.path.abspath(path))

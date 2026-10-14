@@ -4,7 +4,7 @@ Your controller gets exactly what the Indego firmware gets (obs dict at 200 Hz) 
 torques. The env randomises the participant/exo/sensors each episode (domain randomisation) and returns
 the ground truth in `info` for evaluation (cuff forces, falls, COM, crutch loads ...).
 
-    python examples/05_your_controller_env.py
+    python examples/03_your_controller_env.py
 """
 import os
 import sys

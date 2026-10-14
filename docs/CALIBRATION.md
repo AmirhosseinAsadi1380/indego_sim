@@ -85,7 +85,7 @@ modes.
   `clonus_gain_boost` and `delay_scale` set it.
 * **Spasms**: rate (`spasm_rate_per_min`), triggers (rapid hip extension → `spasm_stretch_trigger`),
   amplitude/duration from EMG if you have it. Note: with the quasi-static AFO, a bilateral extensor
-  spasm of default amplitude tips the simulated user backward (`results/standing_extensor_spasm.*`) —
+  spasm of default amplitude tips the simulated user backward —
   check this against your participants and your AFO.
 
 ## 5. How the person uses their arms and leans (the least validated part)

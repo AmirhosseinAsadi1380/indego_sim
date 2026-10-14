@@ -5,7 +5,7 @@ A healthy participant stands quietly (own ankle/hip balance strategy, no crutche
 ground truth you would like to minimise; compare them to what the onboard current-based torque
 estimate suggests.
 
-    python examples/06_transparency.py
+    python examples/04_transparency.py
 """
 import os
 import sys

@@ -25,13 +25,12 @@ them from your own copy of the model: `pip install bpy`, then `tools/export_blen
 | what | command | time |
 |---|---|---|
 | tests | `python -m pytest -q tests` | a few min |
-| quiet standing (SCI, crutches) | `python examples/01_quiet_standing.py [--video] [--spasms]` | ~1 min |
-| SCI walking with the baseline FSM | `python examples/02_sci_walking_fsm.py [--video] [--no-trunk-imu] [--support harness --trigger auto]` | ~1 min |
-| actuator identification on a virtual bench | `python examples/03_actuator_identification.py` | ~2 min |
-| spasticity from a pendulum test | `python examples/04_pendulum_test.py` | ~10 min |
-| Gymnasium env + your controller | `python examples/05_your_controller_env.py` | ~1 min |
-| transparency (healthy standing) | `python examples/06_transparency.py` | ~2 min |
-| a person walking on their own in the exo | `python examples/07_own_walking.py [--subject healthy] [--exo transparent] [--video]` | ~1 min |
+| a person walking on their own in the exo | `python examples/01_own_walking.py [--subject healthy] [--exo transparent] [--video]` | ~1 min |
+| quiet standing (SCI, crutches) | `python examples/02_quiet_standing.py [--video] [--spasms]` | ~1 min |
+| Gymnasium env + your controller | `python examples/03_your_controller_env.py` | ~1 min |
+| transparency (healthy standing) | `python examples/04_transparency.py` | ~2 min |
+| actuator identification on a virtual bench | `python examples/05_actuator_identification.py` | ~2 min |
+| spasticity from a pendulum test | `python examples/06_pendulum_test.py` | ~10 min |
 | FSM walking score over seeds | `python tools/diag/eval_walk.py '<cfg json>' 0,1,2,3 25` | ~1 min / 2 seeds / core |
 | own-walking score over seeds | `python tools/diag/eval_own_walk.py '<cfg json>' 0,1,2,3 30` | ~2 min |
 | tune the own walking for a person | `python tools/diag/tune_own_walk.py '<cfg json>' out.jsonl` | ~1 h on 16 cores |

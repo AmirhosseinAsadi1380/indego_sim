@@ -5,7 +5,7 @@ This script runs the whole protocol of docs/CALIBRATION.md section 2 on the *vir
 real exo. To use your own data, replace the `bench.simulate(...)` calls by your logged arrays
 (time, commanded torque, measured current, joint angle, firmware velocity) at 200 Hz.
 
-    python examples/03_actuator_identification.py            # -> results/actuator_id.png + printed table
+    python examples/05_actuator_identification.py            # -> results/actuator_id.png + printed table
 """
 import os
 import sys

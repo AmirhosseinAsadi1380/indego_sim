@@ -3,7 +3,7 @@
 Shows what your controller would see (onboard sensors) next to the ground truth the simulator logs:
 cuff interaction forces, crutch loads, COM sway, reflex/spasm activity of the paralysed muscles.
 
-    python examples/01_quiet_standing.py [--video] [--spasms]
+    python examples/02_quiet_standing.py [--video] [--spasms]
 """
 import argparse
 import os
